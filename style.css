@@ -1,15 +1,5 @@
-/* canvas{
-  margin:auto;
-  display: block;
-}
-h1{
-  text-align: center;
 
-}
-p{
-  text-align: center;
-} */
-
+/* //font-family: 'Pixelify Sans', sans-serif; */
 
 
 body {
@@ -17,27 +7,65 @@ body {
   margin: 0;
   padding: 0;
   display: block;
-  /* overscroll-behavior: none; */
   max-width: 100%;
   overflow-x: hidden;
   background-color: rgb(56, 4, 76);
   text-align: center;
+  font-size: 20px;
   color: #FFFADA;
   justify-content: center;
   align-items: center;
-  /* transform: translate(-50%,-50%);  */
-
+  position:center;
   overflow-y: hidden;
 }
 
+h2{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFADA;
+  position:center;
+  font-size: 10px;
+
+}
+h3{
+  justify-content: center;
+  /* font-family: 'Pixelify Sans', sans-serif; */
+
+  align-items: center;
+  text-align: center;
+  color: #FFFADA;
+  position:center;
+  font-size: 20px;
+
+}
+p{
+  justify-content: center;
+  font-family: 'Pixelify Sans', sans-serif;
+
+  align-items: center;
+  text-align: center;
+  color: #FFFADA;
+  position:center;
+
+}
+p2{
+  justify-content: center;
+  font-family: 'Pixelify Sans', sans-serif;
+
+  align-items: center;
+  text-align: center;
+  color: #FFFADA;
+  position:center;
+
+}
 .btn2 {
-  font-family:'Times New Roman', Times, serif;
-  /* text-indent: 8px; */
+  font-family: 'Pixelify Sans', sans-serif;
   letter-spacing: 3px;
-  font-size: 25px;
+  font-size: 30px;
   color: #FFFADA;
   cursor:pointer;
-  position:fixed;
+  position:center;
   bottom:  280px;
 }
 
@@ -47,6 +75,4 @@ body {
 
 .btn2:hover span{
   color: rgb(255, 255, 255, 0.5);
-
-
 }
