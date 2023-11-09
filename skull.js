@@ -38,9 +38,9 @@ function collectSkull() {
 
 function skullSpawner() {
   if (timer < 0) {
-    let skull = new Skull(random(height), 0, 50, +2);
+    let skull = new Skull(random(width), 20, 70,6);
     skulls.push(skull);
 
-    timer = 90;
+    timer = 90 ;
   }
 }

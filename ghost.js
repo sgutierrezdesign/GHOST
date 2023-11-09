@@ -1,11 +1,11 @@
 class Ghost {
   
     constructor() {
-      this.r = 120;
-      this.x = 50;
+      this.r = 300;
+      this.x = 250;
       this.y = height - this.r;
       this.vy = 0;
-      this.gravity = 3;
+      this.gravity = 10;
     }
   
     jump() {
@@ -15,10 +15,10 @@ class Ghost {
     }
   
     hits(skull) {
-      let x1 = this.x + this.r * 0.5;
-      let y1 = this.y + this.r * 0.5;
-      let x2 = skull.x + skull.r * 0.5;
-      let y2 = skull.y + skull.r * 0.5;
+      let x1 = this.x + this.r * 1;
+      let y1 = this.y + this.r * 1;
+      let x2 = skull.x + skull.r * 1;
+      let y2 = skull.y + skull.r * 1;
       return collideCircleCircle(x1, y1, this.r, x2, y2, skull.r);
     }
   

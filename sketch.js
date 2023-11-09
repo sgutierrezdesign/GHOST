@@ -12,6 +12,8 @@ let img1;
 let img2;
 let imgh;
 
+let music;
+
 let begin;
 let beginVisible = true;
 
@@ -40,22 +42,25 @@ function preload() {
   img2 = loadImage("ghost.png");
   imgh = loadImage("heart.png");
   begin = loadImage("start.png");
+  music = loadSound("music.mp4");
 } 
 
 function setup() {
+  music.play();
   mode = 0;
   let canvas = createCanvas(700, 500);
   canvas.parent('game');
   pixelDensity(1);
   noSmooth();
   begin = loadImage("start.png");
-  begin.resize(500,700);
+  begin.resize(700,500);
 
 }
 
 function draw() {
-
+  
   if (mode == 0) {
+   
     imageMode(CORNER);
     backg();
     midg();
@@ -78,8 +83,7 @@ function draw() {
     let ghostX;
     ghostX = mouseX;
     imageMode(CENTER);
-    image(img2, ghostX - 15, 400, 250, 200);
-    //ellipse(mouseX, 375, 75); //this tests visually helps set up the collision
+    image(img2, ghostX-20, 400, 170, 150);
 
     imageMode(CORNER);
 
@@ -110,20 +114,25 @@ function draw() {
   } else if (mode == 1) {
     gameOver();
   }
-if(beginVisible) {
-  imageMode(CORNER);
-  image(begin,0,0);
-  begin.resize(700,500);
-}
+
+  if(beginVisible) {
+    imageMode(CORNER);
+    image(begin,-30,0);
+    begin.resize(750,500);
+  }
+
+
 }
 
 //start
 function mousePressed() {
   if(mouseX>0 && mouseX<500 && mouseY>0 && mouseY<700){
     beginVisible = !beginVisible;
+    mode=0
+  }else if(mode==1){
+
   }
  }
-
 
 //background
 function backg() {

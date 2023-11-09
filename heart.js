@@ -36,17 +36,17 @@ class Heart {
   
   function heartSpawner() {
     if (timer < 0) {
-      let heart = new Heart(random(height), 0, 50, 1);
+      let heart = new Heart(random(height), 0, 50, 3);
       hearts.push(heart);
   
-      timer = 90;
+      timer = 40;
     }
   }
   
   function heartCounter() {
     fill(255);
-    textSize(20);
-    image (imgh,560,22,30,30)
-    text(" = " + heartCount, 590, 40);
+    textSize(30);
+    image (imgh,560,15,40,40)
+    text(" = " + heartCount, 600, 40);
     textFont('Pixelify Sans');
   }
